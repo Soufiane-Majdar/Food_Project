@@ -1026,3 +1026,10 @@
     sup {
         padding-left: 4px;
     }
+    /* Modal css */
+    
+    td,
+    th {
+        font-size: smaller;
+        padding: 0px;
+    }
