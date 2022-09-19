@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     #Apps
     'Home',
+    'ckeditor',
     # 'Contact',
     # 'Menu',
     # 'Reviews',
@@ -237,4 +238,22 @@ JAZZMIN_UI_TWEAKS = {
     "theme": "sketchy",
     "dark_mode_theme": None,
 
+}
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [
+            ['Undo', 'Redo',
+             '-', 'Bold', 'Italic', 'Underline',
+             '-', 'Link', 'Unlink', 'Anchor',
+             '-', 'Format',
+             '-', 'SpellChecker', 'Scayt',
+             '-', 'Maximize',
+             '-', 'Language',
+            ],
+        ],
+        'height': '100%',
+        'width': '100%',
+        'toolbarCanCollapse': False,
+    },
 }

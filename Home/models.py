@@ -1,6 +1,7 @@
 from email.mime import image
 from unicodedata import category
 from django.db import models
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -35,7 +36,7 @@ class ComingSoon(models.Model):
 class RestaurantInfo(models.Model):
     name = models.CharField(max_length=200,blank=True)
     address = models.CharField(max_length=200,blank=True)
-    description = models.TextField(blank=True)
+    description = RichTextField(blank=True,null=True)
     phone = models.CharField(max_length=200,blank=True)
     email = models.CharField(max_length=200,blank=True)
     hours = models.CharField(max_length=200,blank=True)
@@ -57,7 +58,7 @@ class ContactInfo(models.Model):
 # Create a class for About info
 class AboutInfo(models.Model):
     title = models.CharField(max_length=200,blank=True)
-    description = models.TextField(blank=True)
+    description = RichTextField(blank=True,null=True)
 
     def __str__(self):
         return self.title
