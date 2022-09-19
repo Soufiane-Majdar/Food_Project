@@ -56,12 +56,11 @@ class ContactInfo(models.Model):
 
 # Create a class for About info
 class AboutInfo(models.Model):
-    name = models.CharField(max_length=200,blank=True)
+    title = models.CharField(max_length=200,blank=True)
     description = models.TextField(blank=True)
-    image = models.ImageField(upload_to='images/',blank=True)
 
     def __str__(self):
-        return self.name
+        return self.title
 
 # Create a class for Client review
 class ClientReview(models.Model):
