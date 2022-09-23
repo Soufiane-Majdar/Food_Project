@@ -35,8 +35,8 @@ def home(request):
    
     # get all menu categories 
     categories = MenuCategory.objects.all()
-    # get all menu items
-    items = MenuItem.objects.all()
+    # get all menu items order by name
+    items = MenuItem.objects.order_by('name')
     #get all reviews
     reviews = ClientReview.objects.all()
     #get restaurant info the first

@@ -75,9 +75,12 @@ $(".client_owl-carousel").owlCarousel({
 });
 
 // Modal
-
+// Get the name
+var name_ = document.getElementById("name");
+var name_err = document.getElementById("name_err");
 $(document).ready(function() {
     prep_modal();
+    name_err.style.visibility = 'hidden';
 });
 
 function prep_modal() {
@@ -119,8 +122,12 @@ function prep_modal() {
                 }
 
                 if (page_track == pages.length - 1) {
-
-                    $(element).find("form").submit();
+                    if (name_.value == "") {
+                        name_err.style.visibility = 'visible';
+                    } else {
+                        name_err.style.visibility = 'hidden';
+                        $(element).find("form").submit();
+                    }
                 }
 
                 if (page_track < pages.length - 1) {
@@ -140,6 +147,7 @@ function prep_modal() {
                 }
 
                 if (page_track == pages.length - 1) {
+
                     $(n_button).text("Next");
                 }
 
@@ -157,3 +165,16 @@ function prep_modal() {
 
     });
 }
+
+/* hide address_input if R_Pickup is selected */
+var adress = document.getElementById("address_input");
+var R_Pickup = document.getElementById("R_Pickup");
+var R_Delivery = document.getElementById("R_Delivery");
+
+R_Pickup.addEventListener("click", function() {
+    adress.style.visibility = 'hidden';
+});
+
+R_Delivery.addEventListener("click", function() {
+    adress.style.visibility = 'visible';
+});
