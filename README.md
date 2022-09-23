@@ -3,6 +3,13 @@ Food Project
 ## Demo
 https://soufianemjr.pythonanywhere.com/
 ## IMAGES
+
+### Admin Panel
+<center>
+  <img src="IMG_git/Admin.png"/>
+  <br>
+</center>
+
 ### Home
 <center>
   <img src="IMG_git/Home.png"/>
