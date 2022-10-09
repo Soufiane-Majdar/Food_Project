@@ -4,6 +4,8 @@ from .models import MenuCategory, MenuItem ,ClientReview,RestaurantInfo,ComingSo
 
 import urllib.parse
 
+
+
 # Create your views here.
 
 
@@ -16,6 +18,9 @@ def home(request):
         request.session['cart'] = {}
     
     # print cart
+    
+
+
     cart=[]
     cart_total=0
     cart_nbr=0
