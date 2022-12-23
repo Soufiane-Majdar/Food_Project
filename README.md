@@ -1,5 +1,14 @@
 # Food_Project
-Food Project
+
+The Food Project is a web application built with Django that allows users to order food online from local restaurants. The project includes a menu of available dishes from the restaurant.
+
+On the backend, the project includes a Django admin panel that allows restaurant owners to manage their menus, view and fulfill orders, and track their sales.
+
+The Food Project is designed to be scalable and easy to maintain, with a clean and responsive user interface that works well on both desktop and mobile devices. It is built using best practices for Django development, including object-relational mapping (ORM) to handle the interactions with the database and Django's built-in security features to protect against common web vulnerabilities.
+
+Overall, the Food Project is a powerful and feature-rich solution for anyone looking to start an online food ordering business or add food ordering functionality to an existing website.
+
+
 ## Demo
 https://soufianemjr.pythonanywhere.com/
 ## IMAGES
