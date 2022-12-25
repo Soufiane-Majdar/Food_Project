@@ -11,6 +11,42 @@ Overall, the Food Project is a powerful and feature-rich solution for anyone loo
 
 ## Demo
 https://soufianemjr.pythonanywhere.com/
+
+
+
+## ✨ How to use it
+
+```bash
+$ # Get the code
+$ get clone https://github.com/Soufiane-Majdar/Food_Project.git
+$ cd Food_Project
+$
+$ # Virtualenv modules installation (Linux)
+$ virtualenv env
+$ source env/bin/activate
+$
+$ # Virtualenv modules installation (Windows)
+$ virtualenv env
+$  .\env\Scripts\activate
+$
+$ # Install modules (Linux)
+$ pip3 install -r requirements.txt
+$ # OR (Windows)
+$ pip install -r requirements.txt
+$
+$ # creat a migration
+$ python manage.py makemigrations
+$ python manage.py migrate
+$
+$
+$ # Start the application
+$ python manage.py runserver 
+$
+$
+$ # Access the web app in browser: http://127.0.0.1:8000/
+```
+
+
 ## IMAGES
 
 ### Admin Panel
