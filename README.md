@@ -18,7 +18,7 @@ https://soufianemjr.pythonanywhere.com/
 
 ```bash
 $ # Get the code
-$ get clone https://github.com/Soufiane-Majdar/Food_Project.git
+$ git clone https://github.com/Soufiane-Majdar/Food_Project.git
 $ cd Food_Project
 $
 $ # Virtualenv modules installation (Linux)
