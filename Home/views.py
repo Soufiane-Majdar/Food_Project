@@ -8,6 +8,9 @@ import urllib.parse
 
 # Create your views here.
 
+# template view
+def template(request):
+     return render(request, 'template.html')
 
 
 
