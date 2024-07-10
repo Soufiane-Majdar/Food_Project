@@ -1,12 +1,36 @@
 from django.shortcuts import render,redirect
 #importing the models
-from .models import MenuCategory, MenuItem ,ClientReview,RestaurantInfo,ComingSoon,AboutInfo
+from .models import MenuCategory, MenuItem ,ClientReview,RestaurantInfo,ComingSoon,AboutInfo,ContactInfo
 
 import urllib.parse
 
 
 
 # Create your views here.
+
+
+
+
+def contact_submit(request):
+    if request.method == 'POST':
+        name = request.POST.get('name', '')
+        phone = request.POST.get('phone', '')
+        email = request.POST.get('email', '')
+        persons = request.POST.get('persons', '')
+        date = request.POST.get('date', '')
+
+        # You can save the contact form data to your database or perform any other actions here
+        # Example: Saving to database
+        contact_info = ContactInfo(name=name, email=email, phone=phone, subject=f"Booking for {persons} persons on {date}", message="")
+        contact_info.save()
+
+        # Optionally, you can add a success message
+        messages.success(request, 'Your booking request has been submitted successfully.')
+
+        # Redirect to a thank you page or back to the same page
+        return redirect('home')
+
+    return render(request, 'index.html')
 
 # template view
 def template(request):
@@ -57,7 +81,7 @@ def home(request):
 
 
     # render the home page
-    return render(request, 'index.html', {'categories': categories, 'items': items,'cart':cart,'cart_total':cart_total,'cart_nbr':cart_nbr,'reviews':reviews,'restaurant':restaurant,'coming_soon':coming_soon,'about':about})
+    return render(request, 'index.html', {'categories': categories, 'menu_items': items,'cart':cart,'cart_total':cart_total,'cart_nbr':cart_nbr,'reviews':reviews,'restaurant':restaurant,'coming_soon':coming_soon,'about':about})
 
 
 
