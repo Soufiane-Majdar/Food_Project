@@ -9,6 +9,13 @@ The Food Project is designed to be scalable and easy to maintain, with a clean a
 Overall, the Food Project is a powerful and feature-rich solution for anyone looking to start an online food ordering business or add food ordering functionality to an existing website.
 
 
+## admin login:
+username: "soufiane"
+password: "s m"
+
+
+
+
 ## Demo
 https://soufianemjr.pythonanywhere.com/
 
