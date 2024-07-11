@@ -1,0 +1,38 @@
+<!-- client section -->
+<section class="client_section layout_padding-bottom" >
+    <div class="container">
+      <div class="heading_container heading_center psudo_white_primary mb_45">
+        <h2>
+          What Says Our Customers
+        </h2>
+      </div>
+      <div class="carousel-wrap row">
+        <div class="owl-carousel client_owl-carousel">
+          {% for review in reviews %}
+          <div class="item">
+            <div class="box">
+              <div class="detail-box">
+                <p>
+                  {{ review.review }}
+                </p>
+                <h6>
+                  {{ review.name }}
+                </h6>
+                <p>
+                  {{ review.star_nbr }} stars
+                </p>
+              </div>
+              <div class="img-box">
+                <center>
+                <b>{{ review.name }}</b>
+            </center>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end client section -->
+  

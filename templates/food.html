@@ -1,0 +1,51 @@
+<!-- food section -->
+<section class="food_section layout_padding-bottom">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>
+                Our Menu
+            </h2>
+        </div>
+
+        <ul class="filters_menu">
+            <li class="active" data-filter="*">All</li>
+            {% for category in categories %}
+                <li data-filter=".{{ category.name|lower }}">{{ category.name }}</li>
+            {% endfor %}
+        </ul>
+
+        <div class="filters-content">
+            <div class="row grid">
+                {% for item in menu_items %}
+                <div class="col-sm-6 col-lg-4 all {{ item.category.name|lower }}">
+                    <div class="box">
+                        <div>
+                            <div class="img-box">
+                                <img src="{{ item.image.url }}" alt="{{ item.name }}">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    {{ item.name }}
+                                </h5>
+                                <p>
+                                    {{ item.description }}
+                                </p>
+                                <div class="options">
+                                    <h6>
+                                        ${{ item.price }}
+                                    </h6>
+                                    <a href="{% url 'add_to_cart' item.id %}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0,0,256,256">
+                                            <g fill="#94d82d" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(9.84615,9.84615)"><path d="M13.5,3.188c-5.695,0 -10.312,4.617 -10.312,10.312c0,5.695 4.617,10.313 10.312,10.313c5.695,0 10.313,-4.618 10.313,-10.313c0,-5.695 -4.618,-10.312 -10.313,-10.312zM19,15h-4v4h-3v-4h-4v-3h4v-4h3v4h4z"></path></g></g>
+                                            </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
