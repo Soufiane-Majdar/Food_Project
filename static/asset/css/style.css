@@ -1034,3 +1034,70 @@
         padding: 0px;
     }
     /* back to top */
+
+
+
+
+
+
+
+
+    .contact_section {
+        padding: 60px 0;
+    }
+    
+    .heading_container {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    .form_container {
+        background: #f9f9f9;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form_container .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form_container .form-control {
+        border-radius: 5px;
+        box-shadow: none;
+        border-color: #ddd;
+    }
+    
+    .form_container .btn_box {
+        text-align: center;
+    }
+    
+    .form_container .btn {
+        background: #5cb85c;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        transition: background 0.3s;
+    }
+    
+    .form_container .btn:hover {
+        background: #4cae4c;
+    }
+    
+    .map_container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        min-height: 300px;
+        margin-top: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    #googleMap {
+        height: 100%;
+        width: 100%;
+    }
+    
